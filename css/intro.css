@@ -1,0 +1,272 @@
+.intro{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+.intro-01{
+    background: rgb(159, 207, 238);
+}
+/* .intro img{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+} */
+.intro span{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+.intro-01 img{
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    animation: main 1.5s infinite alternate linear;
+}
+@keyframes main{
+    0%{
+        transform: translate(-50%, -120px);
+    }
+    100%{
+        transform: translate(-50%, -140px);
+    }
+}
+.intro-02{
+    width: 150px;
+    height: 235px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.intro-02 img{
+    width: 100%;
+}
+.intro-02 span.swipe-finger{
+    position: relative;
+    top: 0;
+    display: inline-block;
+    width: 188px;
+    height: 188px;
+    z-index: 9999;
+}
+.intro-02 span.capture-img{
+    animation: capture-img 1s infinite alternate linear;
+    width: 150px;
+    height: 234px;
+    top: 43%;
+}
+@keyframes capture-img{
+    0%{
+        background: url(../img/capture-1.svg) no-repeat;
+        background-size: 150px;
+    }
+    100%{
+        background: url(../img/capture-2.svg) no-repeat;
+        background-size: 150px;
+    }
+}
+
+.intro-02 span.swipe-finger{
+    animation: swipe-finger 0.9s infinite alternate linear;
+}
+@keyframes swipe-finger{
+    0%{
+        transform: translate(50px, 0);
+        background: url(../img/finger.svg) no-repeat;
+        background-size: 100px;
+    }
+    50%{
+        transform: translate(50px, 0);
+        background: url(../img/finger.svg) no-repeat;
+        background-size: 100px;
+    }
+    100%{
+        transform: translate(0, 0);
+        background: url(../img/finger.svg) no-repeat;
+        background-size: 100px;
+    }
+}
+.intro-02+p{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.intro-03 span:nth-child(1){
+    display: inline-block;
+    width: 188px;
+    height: 188px;
+    animation: dust 3s infinite alternate ease-in-out;
+    z-index: 10;
+}
+.intro-03 span:nth-child(2){
+    display: inline-block;
+    width: 188px;
+    height: 188px;
+    top: 69%;
+    box-shadow: 0 -262px 80px rgba(210, 207, 207, 0.2);
+    border-radius: 10px;
+    animation: dust-shadow 3s infinite alternate ease-in-out;
+}
+
+@keyframes dust{
+    0%{
+        transform: translate(-50%, -130px);
+        background: url(../img/dust1.svg);
+        background-size: 188px;
+    }
+    30%{
+        transform: translate(-50%, -150px);
+        background: url(../img/dust2.svg);
+        background-size: 188px;
+    }
+    65%{
+        transform: translate(-50%, -130px);
+        background: url(../img/dust3.svg);
+        background-size: 188px;
+    }
+    100%{
+        transform: translate(-50%, -150px);
+        background: url(../img/dust4.svg);
+        background-size: 188px;
+    }
+}
+@keyframes dust-shadow{
+    0%{
+        transform: translate(-50%, 50px);
+    }
+    30%{
+        transform: translate(-50%, -50px);
+    }
+    65%{
+        transform: translate(-50%, 50px);
+    }
+    100%{
+        transform: translate(-50%, -50px);
+    }
+}
+.intro-04{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.intro-04 img{
+    position: relative;
+    width: 134px;
+    height: 134px;
+    top: 29%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.intro-04 span{
+    display: inline-block;
+    width: 188px;
+    height: 188px;
+}
+.intro-04 span.bell{
+    animation: bell 2.5s infinite alternate linear;
+}
+@keyframes bell{
+    0%{
+        background: url(../img/bell.svg) no-repeat;
+        background-size: 50px;
+        transform: translate(-10%, -20%);
+        opacity: 0;
+    }
+    80%{
+        background: url(../img/bell.svg) no-repeat;
+        background-size: 50px;
+        transform: translate(-10%, -20%);
+        opacity: 1;
+    }
+    100%{
+        background: url(../img/bell.svg) no-repeat;
+        background-size: 50px;
+        transform: translate(-10%, -20%);
+        opacity: 1;
+    }
+}
+.intro-04 span.noti-finger{
+    animation: noti-finger 2.5s infinite alternate linear;
+}
+@keyframes noti-finger{
+    0%{
+        transform: translate(80px, -50px);
+        background: url(../img/finger.svg) no-repeat;
+        background-size: 100px;
+    }
+    80%{
+        transform: translate(0px, -50px);
+        background: url(../img/finger.svg) no-repeat;
+        background-size: 100px;
+    }
+    100%{
+        transform: translate(0px, -50px);
+        background: url(../img/finger.svg) no-repeat;
+        background-size: 100px;
+    }
+}
+
+.intro p{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    line-height: 20px;
+    width: 300px;
+}
+
+/* swiper */
+
+.first{
+    height: 100vh;
+}
+.swiper-pagination-bullet{
+    /* background: #fff; */
+    opacity: 0.5;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    background: #3492e9;
+}
+.second{
+    width: 150px;
+    height: 230px;
+    margin: auto;
+    overflow: hidden;
+}
+.finger-p-wrap{
+    position: relative;
+    top: -65px;
+    height: 200px;
+}
+.intro-swiper button{
+    position: absolute;
+    background: #3492e9;
+    color: #fff;
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 40px;
+}
+/* .intro-skip-btn{
+    top: 20px;
+    right: 20px;
+    width: 25%;
+} */
+.intro-start-btn{
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 70px;
+}
+.intro-swiper-wrap{
+    position: relative;
+    top: 27%;
+}

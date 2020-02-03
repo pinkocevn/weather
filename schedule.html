@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>나의 일정</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      body {
+        background: #f9f9f9;
+        overflow: hidden;
+      }
+      /* calender */
+      .calendar-box {
+        padding: 0;
+      }
+      #calendar {
+        width: 100%;
+        background: #fff;
+      }
+      .ui-datepicker {
+        padding: 30px 20px 10px;
+      }
+
+      .ui-datepicker a {
+        text-decoration: none;
+        color: #252525;
+      }
+
+      .ui-datepicker table {
+        width: 100%;
+      }
+
+      /*Styling the Header Section*/
+
+      .ui-datepicker-header {
+        height: 40px;
+      }
+
+      .ui-datepicker-month {
+        font-size: 18px;
+      }
+      .ui-datepicker-title {
+        font-size: 20px;
+        color: black;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .ui-datepicker-prev,
+      .ui-datepicker-next {
+        width: 12px;
+        height: 12px;
+        text-indent: 9999px;
+        border-radius: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        margin-top: -12px;
+      }
+
+      .ui-datepicker-prev {
+        float: left;
+        margin-left: 12px;
+      }
+
+      .ui-datepicker-prev:after {
+        transform: rotate(45deg);
+      }
+
+      .ui-datepicker-next {
+        float: right;
+        margin-right: 12px;
+      }
+
+      .ui-datepicker-next:after {
+        transform: rotate(-135deg);
+      }
+
+      .ui-datepicker-calendar thead tr th span {
+        display: block;
+        width: 100%;
+        color: #252525;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 50px;
+      }
+      span.ui-datepicker-year {
+        display: none;
+      }
+
+      .ui-datepicker-calendar tbody td {
+        position: relative;
+        padding-bottom: 5px;
+        height: 45px;
+        text-align: center;
+      }
+
+      /*Styling the Dates*/
+
+      .ui-state-default {
+        display: block;
+        color: #f26a63;
+        line-height: 34px;
+        text-align: center;
+        font-size: 16px;
+        width: 100%;
+      }
+
+      .ui-datepicker-other-month .ui-state-default {
+        display: none;
+      }
+
+      /*active day*/
+
+      .ui-datepicker-calendar .ui-state-highlight {
+        font-weight: bold;
+        color: #ff6d6d;
+      }
+      /* schedule */
+      .schedule-box {
+        width: 100%;
+        height: 100%;
+        background: #f9f9f9;
+        padding: 10px;
+        overflow-Y: scroll;
+      }
+      .schedule-box .schedule {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      .schedule-box .schedule > div {
+        display: flex;
+        align-items: center;
+      }
+      .schedule-box .schedule .schedule-color {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin: auto 20px;
+      }
+      .schedule-box .schedule .schedule-text {
+        display: block;
+      }
+      .schedule-box .schedule .schedule-text h2 {
+        font-size: 1.125em;
+        margin-bottom: 5px;
+      }
+      .schedule-box .schedule .schedule-text span {
+        font-size: 14px;
+      }
+      .schedule-box .schedule .schedule-text .schedule-date {
+        margin-right: 15px;
+      }
+      .schedule-box .schedule .schedule-bell {
+        margin-right: 20px;
+      }
+
+      .no-schedule {
+        margin: 10px 0;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* schedule-day-dot */
+      .schedule-day-dot{
+        display: inline-block;
+        width: 7px;
+        height: 7px;        
+        border-radius: 50%;
+        margin-right: 2px;
+        margin-bottom: 7px;
+      }
+      .schedule-day-dot:last-child{
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button class="material-icons-round" onclick="location.href='main.html'">
+        keyboard_arrow_left
+      </button>
+      <button
+        class="material-icons-round"
+        onclick="location.href='schedule-add.html'"
+      >
+        add
+      </button>
+      <h1>나의 일정</h1>
+    </header>
+    <section>
+      <article class="calendar-box">
+        <div id="calendar"></div>
+      </article>
+      <article class="schedule-box"></article>
+    </section>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/printSchedule.js"></script>
+    <script src="js/font.js"></script>
+  </body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>미세한날씨</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <button class="material-icons-round header-menu">menu</button>
+        <button class="header-place">
+            <i class="material-icons">room</i>
+            <span></span>
+            <i class="material-icons-round arrow-down">keyboard_arrow_down</i>
+        </button>
+        <div class="header-icons">
+            <button class="material-icons-round">near_me</button>
+            <button class="material-icons-round" onclick="location.href='area.html'">add</button>
+        </div>
+    </header>
+    <section class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <article class="weather-main">
+                    <div class="weather-textbox">
+                        날씨 <span class="weather-info">맑음</span> | 미세먼지 <span class="dust-info">좋음</span>
+                    </div>
+                    <div class="weather-img">
+                        <img src="img/weather/01d.svg">
+                        <img src="img/dust/dust1.svg">
+                    </div>
+                    <div class="weather-info">
+                        <span class="weather-temp"></span>
+                        <div class="weather-high-low">
+                            최고 <span class="weather-high">23</span>° / 최저 <span class="weather-low">11</span>°
+                        </div>
+                        <span class="weather-yesterday">어제보다 <span class="weather-gap">1</span>° <span class="higher">높아요!</span><span class="lower">낮아요!</span></span>
+                    </div>
+                    <div class="dust-bar">
+                        <img src="img/dust-bar.svg" alt="미세먼지 수치">
+                        <div class="dust-value-bar"></div>
+                    </div>
+                </article>
+                <article class="weather-detail swiper-no-swiping">
+                    <div class="weather-time">
+                        <ul class="weather-time-list">
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time">오후 1시</span>
+                                <div class="time-weather">
+                                </div>
+                                <div class="time-dust">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="weather-today-detail">
+                        <h2>상세날씨</h2>
+                        <div class="container">
+                            <div>
+                                <img src="img/umbrella.svg" alt="">
+                               <span>강수량</span> 
+                                <ul>
+                                    <li>없음</li>
+                                    <li>0.0mm</li>
+                                </ul>
+                            </div> 
+                            <div>
+                                <img src="img/water-drop.svg" alt="">
+                                <span>습도</span> 
+                                <ul>
+                                    <li>건조</li>
+                                    <li class="humidity">zzz</li>
+                                </ul>
+                            </div> 
+                            <div>
+                                <img src="img/UV.svg" alt="">
+                                <span>자외선</span>
+                                <ul>
+                                    <li>보통</li>
+                                    <li class="uv">4</li>
+                                </ul>
+                            </div> 
+                            <div>
+                                <img src="img/wind.svg" alt="">
+                                <span>북서풍</span>
+                                <ul>
+                                    <li>약함</li>
+                                    <li class="wind"></li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="weather-weekly">
+                        <ul>
+                            <li class="active"><a href="#weather-tab">주간 날씨</a></li>
+                            <li><a href="#dust-tab">주간 미세먼지</a></li>
+                        </ul>
+                        <div class="weather-tab-contents">
+                            <div class="weather-tab" style="display: block;">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>날씨</th>
+                                            <th>습도</th>
+                                            <th>최고/최저</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                           <td>01/13 (월)</td>
+                                           <td><i class="sprite-small sunny"></i></td>
+                                           <td>0%</td>
+                                           <td>21°/11°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/14 (화)</td>
+                                            <td><i class="sprite-small sunny"></i></td>
+                                            <td>0%</td>
+                                            <td>21°/11°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/15 (수)</td>
+                                            <td><i class="sprite-small sunny"></i></td>
+                                            <td>0%</td>
+                                            <td>21°/11°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/16 (목)</td>
+                                            <td><i class="sprite-small sunny"></i></td>
+                                            <td>0%</td>
+                                            <td>21°/11°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/17 (금)</td>
+                                            <td><i class="sprite-small sunny"></i></td>
+                                            <td>0%</td>
+                                            <td>21°/11°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/18 (토)</td>
+                                            <td><i class="sprite-small sunny"></i></td>
+                                            <td>0%</td>
+                                            <td>21°/11°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/19 (일)</td>
+                                            <td><i class="sprite-small sunny"></i></td>
+                                            <td>0%</td>
+                                            <td>21°/11°</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="dust-tab">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>미세먼지</th>
+                                            <th>초미세먼지</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01/13 (월)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/14 (화)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/15 (수)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/16 (목)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/17 (금)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/18 (토)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/19 (일)</td>
+                                            <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                            </td >
+                                           <td>
+                                                <div>
+                                                    <i class="sprite-small dust-soso"></i>보통
+                                                </div>
+                                           </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sunrise-sunset container">
+                        <h2>일출/일몰</h2>
+                        <img src="img/sunrise-sunset.svg">
+                        <div class="today-sun">
+                            <span>06:40</span>
+                            <span>17:45</span>
+                        </div>
+                        <div class="tomorrow-sun">
+                            <span>내일</span>
+                            <div>
+                                <span><i class="sprite-small sunrise"></i>07:45</span>
+                                <span><i class="sprite-small sunset"></i>17:45</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <div class="popup-bg"></div>
+    <div class="popup-place">
+        <ul>
+        </ul>
+    </div>
+    <div class="popup-share">
+        <span>오늘의 날씨를 공유해보세요!</span>
+        <div class="img-box">
+            <img src="" id="theimage">
+        </div>
+        <div class="btn-group">
+            <button class="cancel">취소하기</button>
+            <button class="share">공유하기</button>
+        </div>
+    </div>
+    <nav class="nav-main-menu">
+        <div>
+            <img src="img/menu-logo.svg">
+            <span>미세한 날씨<br>ver 1.01</span>
+        </div>
+            <ul>
+                <li class="menu-1"><a href="schedule.html"><span class="menu-icon"></span>나의 일정</a></li>
+                <li class="menu-2"><a href="korea-weather.html"><span class="menu-icon"></span>전국 날씨</a></li>
+                <li class="menu-3"><a href="dust-standard.html"><span class="menu-icon"></span>미세먼지 기준</a></li>
+                <li class="menu-4"><a href="inquiry.html"><span class="menu-icon"></span>불편사항 보내기</a></li>
+                <li class="menu-5"><a href="setting.html"><span class="menu-icon"></span>설정</a></li>
+            </ul>
+        <button onclick="location.href='index.html'"><i class="material-icons">help</i>어플 설명 다시보기</button>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53210fad4a0664c2f5b16b242e9c41e1&libraries=services"
+    ></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/jquery.plugin.html2canvas.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mainWeather.js"></script>
+    <script src="js/font.js"></script>
+</body>
+</html>

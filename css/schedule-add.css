@@ -1,0 +1,320 @@
+h3 {
+  font-size: 1em;
+}
+section {
+  overflow-y: auto;
+}
+/* schedule*/
+.schedule-date-box {
+  position: relative;
+}
+.schedule-date-box button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #414141;
+}
+.schedule-input {
+  margin: 20px 0 30px;
+}
+.schedule-input input {
+  width: 100%;
+  height: 50px;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 10px;
+  margin: 5px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px;
+}
+
+/* schedule-search-place */
+.schedule-search-place {
+  position: relative;
+}
+.schedule-search-place input {
+  padding-right: 50px;
+}
+.schedule-search-place button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #414141;
+}
+
+/* color-palette */
+.schedule-color .color-palette {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 10px auto 30px;
+}
+.schedule-color .color-palette button {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.schedule-color .color-palette button i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.schedule-color .color-palette button:nth-child(1) {
+  background: #f68383;
+}
+.schedule-color .color-palette button:nth-child(2) {
+  background: #ffab8c;
+}
+.schedule-color .color-palette button:nth-child(3) {
+  background: #fad781;
+}
+.schedule-color .color-palette button:nth-child(4) {
+  background: #95db94;
+}
+.schedule-color .color-palette button:nth-child(5) {
+  background: #a2cdff;
+}
+.schedule-color .color-palette button:nth-child(6) {
+  background: #c394ff;
+}
+
+/* schedule-alarm */
+.schedule-alarm .schedule-add-place {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* alarm-setting */
+.alarm-setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* toggle btn */
+[type="checkbox"] {
+  display: none;
+}
+.noti-wrap {
+  position: relative;
+}
+.noti-check-1 span {
+  font-size: 14px;
+  color: #999;
+}
+.onoff {
+  display: inline-block;
+  position: relative;
+  width: 44px;
+  height: 26px;
+  border-radius: 20px;
+  background: #e3e3e3;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.onoff span {
+  position: absolute;
+  color: #fff;
+  transition: 0.5s;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.onoff .on {
+  left: -50%;
+}
+.onoff .off {
+  right: 20%;
+}
+.onoff .btn {
+  margin: 0 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: #fff;
+}
+#setting-btn-01:checked + label {
+  background: #3492e9;
+}
+#setting-btn-01:checked + label .on {
+  left: 0%;
+}
+#setting-btn-01:checked + label .off {
+  right: -50%;
+}
+#setting-btn-01:checked + label .btn {
+  margin-left: 20px;
+}
+
+#setting-btn-02:checked + label {
+  background: #3492e9;
+}
+#setting-btn-02:checked + label .on {
+  left: 0%;
+}
+#setting-btn-02:checked + label .off {
+  right: -50%;
+}
+#setting-btn-02:checked + label .btn {
+  margin-left: 20px;
+}
+
+/* notice-box */
+.round-box {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 12px 18px;
+  box-sizing: border-box;
+}
+.round-box span {
+  color: #999;
+}
+.round-box span:nth-child(1) {
+  font-size: 12px;
+}
+.round-box span:nth-child(2) {
+  display: block;
+  margin-top: 8px;
+}
+.round-box:nth-child(2) span:nth-child(2) {
+  color: #000;
+}
+.round-box button {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 18px;
+  color: #999;
+}
+.round-box.active span {
+  color: #000;
+}
+.round-box.active button {
+  color: #f68383;
+}
+
+/* footer-btn */
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+footer button {
+  width: 100%;
+  height: 48px;
+  color: #fff;
+  background: #3492e9;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* place-list */
+.place-list-box {
+  z-index: 100;
+  position: absolute;
+  top: 70px;
+  display: none;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  background: #fff;
+  overflow: auto;
+}
+.place-list li {
+  margin: 15px 0;
+}
+.place-list li a {
+  font-size: 14px;
+}
+.place-list li small {
+  display: block;
+  font-size: 12px;
+  color: #006fd6;
+}
+/* widget */
+#ui-datepicker-div{
+  width: 280px;
+  border-radius: 10px;
+}
+.ui-datepicker-calendar td{
+  width: 60px;
+}
+.ui-widget-header{
+  border: none;
+  background: #fff;
+  font-weight: bold;
+}
+.ui-datepicker th{
+  color: darkslategrey;
+}
+.ui-widget.ui-widget-content{
+  border: none;
+  box-shadow: 12px 10px 10px 0px rgba(224, 224, 224, 0.5);
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  border: 0;
+  text-align: center;
+}
+.ui-datepicker .ui-datepicker-title {
+  line-height: 2em;
+  color: #3492e9;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+  /* background: #98cdff;
+  color: #fff; */
+  font-weight: bold;
+  background: #f6f6f6;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  padding: 11px 0;
+  color: #272727;
+  border-radius: 5px;
+  background: none;
+}
+.ui-state-default.ui-state-active{
+  background: #3492e9;
+  color: #fff;
+}
+.ui-datepicker-calendar tr th:first-child,
+.ui-datepicker-calendar tr th:last-child{
+  color: #ff7a7a;
+}
+.ui-datepicker .ui-datepicker-header{
+  border-radius: 10px;
+}
+.ui-datepicker-next.ui-corner-all.ui-state-hover.ui-datepicker-next-hover,
+.ui-datepicker-prev.ui-corner-all.ui-state-hover.ui-datepicker-prev-hover{
+  border: none;
+  background: none;
+}
+.ui-icon.ui-icon-circle-triangle-w{
+  background: url(../img/prev.svg);
+  background-size: 16px;
+}
+.ui-icon.ui-icon-circle-triangle-e{
+  background: url(../img/next.svg);
+  background-size: 16px;
+}

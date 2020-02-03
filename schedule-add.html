@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>일정 추가</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/schedule-add.css" />
+  </head>
+  <body>
+    <header>
+      <button
+        class="material-icons-round"
+        onclick="location.href='schedule.html'"
+      >
+        keyboard_arrow_left
+      </button>
+      <h1>일정 추가</h1>
+    </header>
+    <section>
+      <article class="schedule-input">
+        <input type="text" placeholder="일정명" class="schedule-title" />
+        <div class="schedule-date-box">
+          <input
+            type="text"
+            readonly
+            placeholder="시작 날짜"
+            class="schedule-date datepicker start-date"
+            id="fromDate"
+          />
+          <button class="material-icons-round">calendar_today</button>
+        </div>
+        <div class="schedule-date-box">
+          <input
+            type="text"
+            readonly
+            placeholder="종료 날짜"
+            class="schedule-date datepicker end-date"
+            id="toDate"
+          />
+          <button class="material-icons-round">calendar_today</button>
+        </div>
+        <div class="schedule-search-place">
+          <input
+            type="text"
+            placeholder="장소"
+            class="schedule-place"
+            id="address"
+          />
+          <button class="material-icons-round" id="place-submit">search</button>
+          <div class="place-list-box">
+            <ul class="place-list"></ul>
+          </div>
+        </div>
+      </article>
+      <article class="schedule-color">
+        <h3>일정바 색상</h3>
+        <div class="color-palette">
+          <button data-color="#F68383"></button>
+          <button data-color="#FFAB8C"></button>
+          <button data-color="#FAD781"></button>
+          <button data-color="#95DB94"></button>
+          <button data-color="#A2CDFF"></button>
+          <button data-color="#C394FF"></button>
+        </div>
+      </article>
+      <article class="schedule-alarm">
+        <div class="schedule-add-place">
+          <h3>메인에 장소 추가</h3>
+          <div class="switch">
+            <input type="checkbox" id="setting-btn-01" />
+            <label for="setting-btn-01" class="onoff">
+              <span class="on"></span>
+              <span class="off"></span>
+              <span class="btn"></span>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div class="alarm-setting">
+            <h3>알림 설정</h3>
+            <div class="switch">
+              <input type="checkbox" id="setting-btn-02" />
+              <label for="setting-btn-02" class="onoff">
+                <span class="on"></span>
+                <span class="off"></span>
+                <span class="btn"></span>
+              </label>
+            </div>
+          </div>
+          <div class="noti-check noti-check-2">
+            <div class="round-box">
+              <span>시간 설정</span>
+              <span>오전 06 : 50</span>
+              <button class="material-icons-round">alarm</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <button id="schedule-submit">확인</button>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53210fad4a0664c2f5b16b242e9c41e1&libraries=services"
+    ></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/place.js"></script>
+    <script src="js/font.js"></script>
+    <script>
+      $(window)
+        .resize(function() {
+          var height = $(window).innerHeight() - 150;
+          $("section").css("height", height);
+          // $('#ui-datepicker-div').css({
+          //   'left':'50%',
+          //   'transform':'translateX(-50%)'
+          // })
+        })
+        .resize();
+    </script>
+  </body>
+</html>

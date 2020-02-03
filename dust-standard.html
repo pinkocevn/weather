@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>미세먼지 기준</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      header {
+        z-index: 10;
+        position: fixed;
+      }
+      header button {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: white;
+      }
+      section {
+        margin-top: 60px;
+        overflow-y: auto;
+      }
+      .dust-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        border: none;
+        border-radius: 15px;
+        padding: 20px 20px 20px 0;
+        box-sizing: border-box;
+      }
+      .first {
+        background: #ecf5fc;
+      }
+      .second {
+        background: #e3f5eb;
+      }
+      .third {
+        background: #fff7e6;
+      }
+      .fourth {
+        background: #fef0f0;
+      }
+      .dust-group .img-box {
+        position: relative;
+        width: 30%;
+        float: left;
+      }
+      .dust-group .img-box img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+      }
+      .dust-group .text-box {
+        width: 70%;
+        float: left;
+        box-sizing: border-box;
+      }
+      .dust-group .text-box p {
+        margin-bottom: 10px;
+        line-height: 20px;
+        font-size: 0.875em;
+      }
+      .dust-group .text-box h2 {
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .dust-group .text-box span {
+        font-size: 0.75em;
+        color: #757575;
+        padding-right: 5px;
+      }
+      footer {
+        font-size: 0.75em;
+        line-height: 14px;
+        color: #999999;
+      }
+      footer p {
+        margin: 5px 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button class="material-icons-round" onclick="location.href='main.html'">
+        keyboard_arrow_left
+      </button>
+      <h1>미세먼지 기준</h1>
+    </header>
+    <section>
+      <article>
+        <div class="dust-group first">
+          <div class="img-box">
+            <img src="img/dust/dust1.svg" alt="" />
+          </div>
+          <div class="text-box">
+            <h2>좋음</h2>
+            <p>대기오염 관련 질환자군에게도 영향이 유발되지 않는 수준</p>
+            <span>한국 : 0~30</span>
+            <span>WHO : 0~30</span>
+          </div>
+        </div>
+        <div class="dust-group second">
+          <div class="img-box">
+            <img src="img/dust/dust2.svg" alt="" />
+          </div>
+          <div class="text-box">
+            <h2>보통</h2>
+            <p>환자군에게 만성 노출시 경미한 영향이 유발될 수 있는 수준</p>
+            <span>한국 : 31~80</span>
+            <span>WHO : 31~50</span>
+          </div>
+        </div>
+        <div class="dust-group third">
+          <div class="img-box">
+            <img src="img/dust/dust3.svg" alt="" />
+          </div>
+          <div class="text-box">
+            <h2>나쁨</h2>
+            <p>
+              환자군 및 민감군(어린이, 노약자 등)에게 유해한 영향 유발, 일반인도
+              건강상 불쾌감을 경험할 수 있는 수준
+            </p>
+            <span>한국 : 81~150</span>
+            <span>WHO : 51~100</span>
+          </div>
+        </div>
+        <div class="dust-group fourth">
+          <div class="img-box">
+            <img src="img/dust/dust4.svg" alt="" />
+          </div>
+          <div class="text-box">
+            <h2>매우 나쁨</h2>
+            <p>
+              환자군 및 민감군에게 급성 노출시 심각한 영향 유발, 일반인도 약한
+              영향이 유발될한 있는 수준
+            </p>
+            <span>한국 : 151~</span>
+            <span>WHO : 101~</span>
+          </div>
+        </div>
+        <footer>
+          <span>단위:㎍/m³</span>
+          <p>미세한 날씨는 세계보건기구(WHO)의 기준을 따릅니다.</p>
+        </footer>
+      </article>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/font.js"></script>
+  </body>
+</html>

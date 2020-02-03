@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>설정</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .noti-wrap{
+            position: relative;
+        }
+        .noti-check{
+            margin-top: 25px;
+        }
+        .noti-check h3{
+            margin: 20px 0;
+            display: inline-block;
+        }
+        .noti-title{
+            font-size : 0.875em;
+            color: #999;
+        }
+        .noti-wrap .switch{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .round-box{
+            position: relative;
+            width: 100%;
+            height: 70px;
+            border-radius: 10px;
+            background: #F9F9F9;
+            padding: 12px 18px;
+            box-sizing: border-box;
+        }
+        .round-box span{
+            color: #999;
+        }
+        .round-box .time-setting{
+            font-size : 0.75em;
+        }
+        .round-box span:nth-child(2){
+            display: block;
+            margin-top: 8px;
+        }
+        /* .round-box:nth-child(2) span:nth-child(2){
+            color: #000;
+        } */
+        .round-box button{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 18px;
+            color: #CFCFCF;
+        }
+        /* .round-box:nth-child(2) button{
+            color: #F68383;
+        } */
+
+        [type="checkbox"], [type="radio"]{
+            display: none;
+        }
+        .onoff{
+            display: inline-block;
+            position: relative;
+            width: 44px;
+            height: 26px;
+            border-radius: 20px;
+            background: #e3e3e3;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        .onoff span{
+            position: absolute;
+            color:#fff;
+            transition: 0.5s;
+            top:50%; transform: translateY(-50%);
+        }
+        .onoff .on{left:-50%;}
+        .onoff .off{right:20%;}
+        .onoff .btn{
+            margin: 0 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        #setting-btn-01:checked+label{background: #3492E9;}
+        #setting-btn-01:checked+label .on{left:0%;}
+        #setting-btn-01:checked+label .off{right:-50%;}
+        #setting-btn-01:checked+label .btn{margin-left: 20px;}
+
+        #setting-btn-02:checked+label{background: #3492E9;}
+        #setting-btn-02:checked+label .on{left:0%;}
+        #setting-btn-02:checked+label .off{right:-50%;}
+        #setting-btn-02:checked+label .btn{margin-left: 20px;}
+
+        .noti-check-1.active .round-box>span{color: #000;}
+        .noti-check-1.active button{color: #F68383;}
+        .noti-check-2.active .round-box>span{color: #000;}
+        .noti-check-2.active button{color: #F68383;}
+    
+
+        /* font-size */
+        .font-size-wrap{
+            position: relative;
+            display: inline-block;
+            top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: 15px;
+        }
+        .font-size-wrap div{
+            position: relative;
+            float: left;
+            margin-right: 30px;
+        }
+        .font-size-wrap div input{
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .font-size-wrap i{
+            display: inline-block;
+            vertical-align: bottom;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .font-size-check span{
+            display: block;
+            font-size : 0.875em;
+            margin-bottom: 15px;
+            color: #999;
+        }
+        .font-size-wrap label span{
+            padding-top: 15px;
+            color: #000;
+        }
+        .font-size-wrap div:nth-child(1) i{width: 12px; height: 12px;}
+        .font-size-wrap div:nth-child(2) i{width: 20px; height: 20px;}
+        .font-size-wrap div:nth-child(3) i{width: 24px; height: 24px;}
+        .font-size-wrap div:nth-child(4) i{width: 36px; height: 36px;}
+
+        .font-size-check{
+            background: url(img/setting-radio-bar.svg) no-repeat center;
+            margin-top: 30px;
+        }
+        #font-size-check-1+label span{font-size : 12px;}
+        #font-size-check-2+label span{font-size : 14px;}
+        #font-size-check-3+label span{font-size : 16px;}
+        #font-size-check-4+label span{font-size : 18px;}
+
+        #font-size-check-1+label i{background: url(img/check1-1.svg) no-repeat; background-size: 12px; top: -24px;}
+        #font-size-check-2+label i{background: url(img/check1-2.svg) no-repeat; background-size: 20px; top: -28px;}
+        #font-size-check-3+label i{background: url(img/check1-3.svg) no-repeat; background-size: 24px; top: -31px;}
+        #font-size-check-4+label i{background: url(img/check1-4.svg) no-repeat; background-size: 36px; top: -38px;}
+
+        #font-size-check-1:checked+label i{background: url(img/check2-1.svg) no-repeat; background-size: 12px;}
+        #font-size-check-2:checked+label i{background: url(img/check2-2.svg) no-repeat; background-size: 18px;}
+        #font-size-check-3:checked+label i{background: url(img/check2-3.svg) no-repeat; background-size: 24px;}
+        #font-size-check-4:checked+label i{background: url(img/check2-4.svg) no-repeat; background-size: 36px;}
+    </style>
+</head>
+<body>
+    <header>
+        <button class="material-icons-round" onclick="location.href='main.html'">keyboard_arrow_left</button>
+        <h1>설정</h1>
+    </header>
+    <section class="setting-wrap">
+        <article>
+            <div class="noti-check noti-check-1">
+                <span class="noti-title">알림</span>
+                <div class="noti-wrap">
+                    <h3>미세한 날씨 알림</h3>
+                    <div class="switch">      
+                        <input type="checkbox" id="setting-btn-01">
+                        <label for="setting-btn-01" class="onoff">
+                        <span class="on"></span>
+                        <span class="off"></span>
+                        <span class="btn"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="round-box">
+                    <span class="time-setting">시간 설정</span>
+                    <span>오전 06 : 50</span>
+                    <button class="material-icons-round">alarm</button>
+                </div>
+            </div>
+            <div class="noti-check noti-check-2">
+                <div class="noti-wrap">
+                <h3>마스크, 우산 알림</h3>
+                    <div class="switch">      
+                        <input type="checkbox" id="setting-btn-02">
+                        <label for="setting-btn-02" class="onoff">
+                            <span class="on"></span>
+                            <span class="off"></span>
+                            <span class="btn"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="round-box">
+                    <span class="time-setting">시간 설정</span>
+                    <span>오전 06 : 50</span>
+                    <button class="material-icons-round">alarm</button>
+                </div>
+            </div>
+            <!-- <div class="dust-check">
+                <span>미세먼지 기준</span>
+                <input type="radio" name="dust-check" id="dust-check-1" checked><label for="dust-check-1">WHO 기준<i></i></label>
+                <input type="radio" name="dust-check" id="dust-check-2"><label for="dust-check-2">국내 기준<i></i></label>
+            </div> -->
+            <div class="font-size-check">
+                <span>폰트 크기</span>
+                <div class="font-size-wrap">
+                    <div>
+                        <input type="radio" name="font-size" id="font-size-check-1" value="15"><label for="font-size-check-1"><i></i><span>가나다</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="font-size" id="font-size-check-2" value="16"><label for="font-size-check-2"><i></i><span>가나다</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="font-size" id="font-size-check-3" value="17"><label for="font-size-check-3"><i></i><span>가나다</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="font-size" id="font-size-check-4" value="18"><label for="font-size-check-4"><i></i><span>가나다</span></label>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/setting.js"></script>
+</body>
+</html>

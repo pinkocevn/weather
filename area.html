@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>지역 관리</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+    .area-search{
+        position: relative;
+        box-sizing: border-box;
+        top: 25px;
+        margin-bottom: 25px;
+    }
+    .area-search input{
+        width: 88%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #E5E5E5;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 0.75em;
+    }
+    .area-search button{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size:  1.75em;
+    }
+    .area-title{
+        position: relative;
+    }
+    .area-title h2{
+        padding: 30px 0 20px;
+        font-weight: bold;
+        font-size: 1.125em;
+    }
+    .area-title button{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+    }
+    .area-list{
+        margin: 10px 0;
+    }
+    .area-list ul{
+        overflow: hidden;
+    }
+    .area-list ul li{
+        margin-bottom: 5px;
+        font-size: 0.875em;
+        position: relative;
+        transition: left 0.5s;
+        left: 0;
+        height: 35px;
+        line-height: 35px;
+    }
+    .area-list ul li.left{
+        left: -60px;
+    }
+    .area-list ul li button{
+        position: absolute;
+        background: crimson;
+        color: #fff;
+        right: -60px;
+        width: 60px;
+        height: 35px;
+    }
+    .area-list ul li span{
+        display: inline-block;
+        height: 20px;
+        width: 4px;
+        background: #3492E9;
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+    .area-list p{
+        font-size: 0.875em;
+        color: #B8B8B8;
+    }
+
+    /* delete-popup */
+    .popup-delete{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        width: 320px;
+        border-radius: 10px;
+        background: #fff;
+        text-align: center;
+        z-index: 100;
+        overflow: hidden;
+    }
+    .popup-delete span{
+        display: block;
+        margin: 40px 0;
+    }
+    .popup-delete .btn-group{
+        width: 100%;
+        display: flex;
+    }
+    .popup-delete .btn-group button{
+        width: 50%;
+        height: 50px;
+        background: #fafafa;
+        border-top: 1px solid #F5F3F3;
+        box-sizing: border-box;
+    }
+    .popup-delete button.no{
+        border-right: 1px solid #F5F3F3;
+    }
+
+    /* place-list */
+    .place-list-box{
+        z-index: 100;
+        position: absolute;
+        top: 70px;
+        display: none;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        box-sizing: border-box;
+        padding: 0 30px;
+        background: #fff;
+        overflow: auto;
+    }
+    .place-list li{
+        margin: 15px 0;
+    }
+    .place-list li a{
+        font-size: 14px;
+    }
+    .place-list li small{
+        display: block;
+        font-size: 12px;
+        color: #006fd6;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="material-icons-round" onclick="location.href='main.html'">keyboard_arrow_left</button>
+        <h1>지역 관리</h1>
+    </header>
+    <section class="area-wrap">
+        <article>
+            <form action="" class="area-search">
+                <input type="text" id="searchbox" placeholder="동/읍/면 또는 관광지명을 입력해주세요." autocomplete="off">
+                <button class="material-icons">search</button>
+                <div class="place-list-box">
+                    <ul class="place-list">
+                        
+                    </ul>
+                </div>
+            </form>
+            <div class="area-title">
+                <h2>내 지역</h2>
+                <button class="material-icons-round">delete</button>
+            </div>
+            <div class="area-list">
+                <ul>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <div class="popup-bg"></div>
+    <div class="popup-delete">
+        <span>내 지역을 모두 삭제하시겠습니까?</span>
+        <div class="btn-group">
+            <button class="no">아니오</button>
+            <button class="yes">네</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touch/1.1.0/jquery.touch.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53210fad4a0664c2f5b16b242e9c41e1&libraries=services"></script>
+    <script src="js/place.js"></script>
+    <script src="js/font.js"></script>
+</body>
+</html>

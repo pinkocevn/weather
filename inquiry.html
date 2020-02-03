@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>불편사항 보내기</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      header {
+        margin-bottom: 30px;
+      }
+      header button {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: white;
+      }
+      .inquiry-row {
+        margin: 15px 0;
+      }
+      .inquiry-row:nth-child(2) {
+        margin-bottom: 25px;
+      }
+      .inquiry-row input {
+        width: 100%;
+        height: 50px;
+        padding: 16px 0 15px 20px;
+        border-radius: 5px;
+        border: none;
+        box-sizing: border-box;
+        background: #f9f9f9;
+        font-size: 14px;
+      }
+      legend {
+        font-size: 0.875em;
+      }
+      .file-input {
+        margin-top: 9px;
+        width: 100%;
+      }
+      #file-route {
+        width: 100%;
+        height: 32px;
+        border-radius: 5px;
+        background: #f9f9f9;
+        border: none;
+      }
+      .file-input label {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        width: 100px;
+        margin-left: 10px;
+        height: 32px;
+        background: #3492e9;
+        color: white;
+        text-align: center;
+        line-height: 32px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.75em;
+      }
+      .file-group {
+        display: flex;
+        justify-content: space-between;
+      }
+      .file-input input[type="file"] {
+        display: none;
+      }
+      .file-input input[type="text"] {
+        width: 100%;
+        height: 32px;
+        background: #f9f9f9;
+        border: none;
+        border-radius: 5px;
+        padding: 9px 0 9px 12px;
+        box-sizing: border-box;
+      }
+      .text-box {
+        margin-top: 21px;
+      }
+      textarea {
+        width: 100%;
+        height: 245px;
+        border: 1px solid #f1f1f1;
+        margin-top: 11px;
+        outline: none;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 0.85em;
+      }
+      .text-box button {
+        width: 100%;
+        height: 48px;
+        background: #3492e9;
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        line-height: 48px;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button class="material-icons-round" onclick="location.href='main.html'">
+        keyboard_arrow_left
+      </button>
+      <h1>불편사항 보내기</h1>
+    </header>
+    <section>
+      <article>
+        <form action="#">
+          <div class="inquiry-row">
+            <input type="text" placeholder="제목" />
+          </div>
+          <div class="inquiry-row">
+            <input type="text" placeholder="답변 받을 이메일 주소" />
+          </div>
+          <legend>첨부 파일</legend>
+          <div class="file-input">
+            <input
+              type="file"
+              id="file"
+              onchange="javascript:document.getElementById('file-route').value=this.value"
+            />
+            <div class="file-group">
+              <input
+                type="text"
+                readonly
+                placeholder="선택된 파일 없음"
+                id="file-route"
+              />
+              <label for="file">파일 선택</label>
+            </div>
+          </div>
+          <div class="text-box">
+            <legend>불편/문의사항</legend>
+            <textarea placeholder="내용을 입력해주세요."></textarea>
+            <button type="submit">전송</button>
+          </div>
+        </form>
+      </article>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/font.js"></script>
+  </body>
+</html>
